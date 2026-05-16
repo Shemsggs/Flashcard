@@ -16,10 +16,43 @@
       <div class="controls">
         <div id="categories" class="categories"></div>
         <div class="actions">
+          <button id="helpBtn" class="btn help-btn">?</button>
           <button id="restartBtn" class="btn">Restart</button>
         </div>
       </div>
     </header>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>How to Use Flashcards</h2>
+          <button id="closeModal" class="close-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="help-section">
+            <h3>1. Select Categories</h3>
+            <p>Check the categories on the left to choose what you want to study. Click "Build Deck" to start.</p>
+          </div>
+          <div class="help-section">
+            <h3>2. Study Cards</h3>
+            <p>Click or press Space to flip the card and see the answer.</p>
+          </div>
+          <div class="help-section">
+            <h3>3. Mark Progress</h3>
+            <p><strong>Correct</strong> - Card is answered right<br><strong>Wrong</strong> - Card moves to end for review<br><strong>Skip</strong> - Move to next card</p>
+          </div>
+          <div class="help-section">
+            <h3>4. Track Stats</h3>
+            <p>View your Correct, Wrong, Left, and Total cards at the top.</p>
+          </div>
+          <div class="help-section">
+            <h3>Keyboard Shortcuts</h3>
+            <p><strong>Space</strong> - Flip card</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="panel stats-panel">
       <div class="stats">

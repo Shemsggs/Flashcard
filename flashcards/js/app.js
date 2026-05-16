@@ -141,6 +141,31 @@
     skipBtn.addEventListener('click', ()=>{ skipCard(); });
     restartBtn.addEventListener('click', ()=>{ restart(); });
     doneRestart.addEventListener('click', ()=>{ restart(); });
+    
+    // Help modal
+    const helpBtn = document.getElementById('helpBtn');
+    const helpModal = document.getElementById('helpModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    helpBtn.addEventListener('click', ()=>{
+      helpModal.classList.remove('hidden');
+    });
+    
+    closeModal.addEventListener('click', ()=>{
+      helpModal.classList.add('hidden');
+    });
+    
+    helpModal.addEventListener('click', (e)=>{
+      if(e.target === helpModal) helpModal.classList.add('hidden');
+    });
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e)=>{
+      if(e.code === 'Space' && !helpModal.classList.contains('hidden') === false){
+        e.preventDefault();
+        cardEl.classList.toggle('flipped');
+      }
+    });
   }
 
   // Init
