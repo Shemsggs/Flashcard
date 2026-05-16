@@ -1,0 +1,10 @@
+{
+  "name": "flashcard-app",
+  "version": "1.0.0",
+  "description": "A web-based flashcard study application",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "dev": "npx http-server docs -p 8000"
+  }
+}
